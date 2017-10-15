@@ -11,7 +11,7 @@ function validateForm(array $formData) : bool {
             && $formData['price'] > 0;
 }
 
-function findTimezoneByAirportCode(string $code) {
+function findTimezoneByAirportCode(string $code) : DateTimeZone {
     global $airports;
     foreach($airports as $airport) {
         if($airport['code'] === $code) {
@@ -20,7 +20,7 @@ function findTimezoneByAirportCode(string $code) {
     }
 }
 
-function findNameByAirportCode(string $code) {
+function findNameByAirportCode(string $code) : string {
     global $airports;
     foreach($airports as $airport) {
         if($airport['code'] === $code) {
